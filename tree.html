@@ -23,38 +23,74 @@
       </a>
     </div>
   </nav>
-
-  <div class="container-fluid my-3 text-center" x-data="{ search: '', plantData,
-        get filteredItems() {
-                    return this.plantData.filter(
-                        i => i['personal note'].toLowerCase().includes(this.search)
-                    )},
-            }">
-
-    <!-- list with search -->
-    <input x-model="search" placeholder="Search common name...">
-
+  <div class="container-fluid my-3 text-center">
     <div class="row mt-3 justify-content-center">
-      <template x-for="plant in filteredItems" :key="plant.id">
-        <div class="card mb-3 mx-2 shadow bg-success-subtle" style="width: 18rem;">
-          <h5>
-            <div class="mt-2 mb-1" x-text="plant['personal note']"></div>
-          </h5>
-          <!-- <img x-bind:src="plant.image" class="card-img-top" alt="plant.family"> -->
-          <img x-bind:src="'./images/'+ plant.id+'.jpg'" class="card-img-top" alt="plant.family">
-          <div class="card-body">
-            <div x-text="plant['current name']"></div>
-            <i>
-              <div class="small text-body-secondary" x-text="'Family: '+plant.family"></div>
-            </i>
+      <div class=" mb-3 mx-2 shadow bg-success-subtle" style="width: 18rem;" x-data="{ open: false }">
+        <button @click="open = ! open">lvl 1</button>
+        <div x-show="open">
+          Content 1...
+          <!-- <div class="row mt-3 justify-content-center"> -->
+          <div class="mb-3 mx-2 shadow bg-success" x-data="{ open: false }">
 
-            <a x-bind:href="plant.URL" class="card-link">more info</a>
+            <button @click="open = ! open">lvl 2</button>
 
+            <div x-show="open">
+              Content 2...
+            </div>
+          </div>
+
+          <!-- </div> -->
+
+
+        </div>
+      </div>
+
+      <div class="card mb-3 mx-2 shadow bg-success-subtle" style="width: 18rem;" x-data="{ open: false }">
+        <button @click="open = ! open">lvl 1</button>
+        <div x-show="open">
+          Content 1...
+          <div class="card mb-3 mx-2 shadow bg-success-subtle" style="width: 16rem;" x-data="{ open: false }">
+            <button @click="open = ! open">lvl 2</button>
+
+            <div x-show="open">
+              Content 2...
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- https://alpinejs.dev/directives/teleport -->
+    <!-- Teleporting is especially helpful if you are trying to nest one modal within another. Alpine makes it simple to do so: -->
+    <div x-data="{ open: false }">
+      <button @click="open = ! open">Toggle Modal</button>
+
+      <template x-teleport="body">
+        <div x-show="open">
+          Modal contents...
+
+          <div x-data="{ open: false }">
+            <button @click="open = ! open">Toggle Nested Modal</button>
+
+            <template x-teleport="body">
+              <div x-show="open">
+                Nested modal contents...
+              </div>
+            </template>
           </div>
         </div>
       </template>
     </div>
+
+
+
   </div>
+
+
+
+
   <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
     <div class="small text-body-secondary mx-5">copyright 2023</div>
   </footer>

@@ -1,3 +1,5 @@
+gtree https://www.google.com.hk/search?newwindow=1&client=firefox-b-d&q=Plant+species+list&sa=X&ved=2ahUKEwiGk_awgKz-AhVKKlkFHRIKAGEQ1QJ6BAhNEAE&biw=1920&bih=927&dpr=1
+
 scientific view: Familia: Euphorbiaceae
 Subfamilia: Crotonoideae
 Tribus: Codiaeae
@@ -5,4 +7,8 @@ Genus: Codiaeum
 Species: Codiaeum variegatum
 Varietates: C. v. var. cavernicola – C. v. var. variegatum
 
-basic view: trees, bushes, fruit trees, flowers
+basic view: trees, bushes, fruit trees, ornamental
+
+tags: frequency: rare, common.
+
+ai to write description
