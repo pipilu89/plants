@@ -7,7 +7,18 @@ Genus: Codiaeum
 Species: Codiaeum variegatum
 Varietates: C. v. var. cavernicola – C. v. var. variegatum
 
-basic view: trees, bushes, fruit trees, ornamental
+  Kingdom: Plantae
+  Clade: Tracheophytes
+  Clade: Angiosperms
+  Clade: Eudicots
+  Clade: Asterids
+  Order: Gentianales
+  Family: Apocynaceae
+  Genus: Plumeria
+  Species: P. rubra
+
+most basic division
+basic view: trees, bushes, fruit trees, ornamental, ferns/horsetails (Pteridophyta/Equisetophyta), mosses (Bryophyta), conifers (Coniferophyta), flowering plants (Angiosperms).
 
 tags: frequency: rare, common.
 

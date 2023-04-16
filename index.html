@@ -20,6 +20,7 @@
         <img src="./images/logo.png" alt="Logo" width="18" height="24" class="d-inline-block ">
         <strong> Hainan Plants </strong>
         <a href="./tree.html">tree</a>
+        <a href="./classification.html">classify</a>
       </a>
     </div>
   </nav>
@@ -46,8 +47,10 @@
             <div x-text="plant['current name']"></div>
             <i>
               <!-- <div class="small text-body-secondary" x-text="'Family: '+plant.family"></div> -->
-              <a x-bind:href="'./family/'+plant.family +'.html'"><div class="small text-body-secondary" x-text="'Family: '+plant.family"></div></a>
-              
+              <a x-bind:href="'./family/'+plant.family +'.html'">
+                <div class="small text-body-secondary" x-text="'Family: '+plant.family"></div>
+              </a>
+
             </i>
 
             <a x-bind:href="plant.URL" class="card-link">more info</a>
