@@ -146,7 +146,7 @@ async function run() {
   }
 
 
-  //-
+  //-Collaspe Expand all functions.
   // https://stackoverflow.com/questions/28754273/d3-js-tree-expand-all-and-collapse-all
 
   // contains bug: when click collaspe a node, can no longer expand it. (also it turnd frey rather than black, indicating it has no children?)
